@@ -9,7 +9,7 @@ namespace Logic
     /// <summary>
     /// Sert à gérer les examens
     /// </summary>
-    class Exam
+    public class Exam
     {
         private Module module;
 

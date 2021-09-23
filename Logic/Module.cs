@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
+    /// <summary>
+    /// Gère les modules
+    /// </summary>
     public class Module : PedagogicalElement
     {
     }
