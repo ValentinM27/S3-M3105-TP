@@ -47,5 +47,18 @@ namespace NoteBook
             foreach (var item in list)
                 units.Items.Add(item);
         }
+
+        private void EditUnit(object sender, MouseButtonEventArgs e)
+        {
+            if (units.SelectedItem is Unit u)
+            {
+                EditElementWindow third = new EditElementWindow(u);
+                if (third.ShowDialog() == true)
+                {
+                    DrawUnits();
+                }
+            }
+
+        }
     }
 }

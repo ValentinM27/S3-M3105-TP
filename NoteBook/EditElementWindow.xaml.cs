@@ -24,9 +24,21 @@ namespace NoteBook
         {
             InitializeComponent();
             this.element = elt;
+            nameBox.Text = element.Name;
+            coefBox.Text = element.Coef.ToString();
         }
 
-        private Ped
+        private PedagogicalElement element;
+
+        public PedagogicalElement Element
+        {
+            get => this.element;
+
+            set
+            {
+                this.element = value;
+            }
+        }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -35,7 +47,17 @@ namespace NoteBook
 
         private void Validate(object sender, RoutedEventArgs e)
         {
-            DialogResult = true;
+            try
+            {
+                element.Name = nameBox.Text;
+                element.Coef = (float)Convert.ToDouble(coefBox.Text);
+                DialogResult = true;
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show(x.Message);
+            }
+
         }
     }
 }
