@@ -39,6 +39,9 @@ namespace NoteBook
             }
         }
 
+        /// <summary>
+        /// Permet de charger les units dans le tableau d'affichage
+        /// </summary>
         private void DrawUnits()
         {
             var list = this.notebook.ListUnits();
@@ -48,6 +51,11 @@ namespace NoteBook
                 units.Items.Add(item);
         }
 
+        /// <summary>
+        /// PErmet de double click une unit pour l'éditer
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EditUnit(object sender, MouseButtonEventArgs e)
         {
             if (units.SelectedItem is Unit u)
@@ -59,6 +67,29 @@ namespace NoteBook
                 }
             }
 
+        }
+
+        /// <summary>
+        /// Permet d'ajouter une unit
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void addUnit(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Unit newUnit = new Unit();
+                EditElementWindow third = new EditElementWindow(newUnit);
+                if (third.ShowDialog() == true)
+                {
+                    notebook.AddUnit(newUnit);
+                    DrawUnits();
+                }
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show(x.Message);
+            }
         }
     }
 }

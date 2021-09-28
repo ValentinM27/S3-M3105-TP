@@ -9,7 +9,7 @@
     <Grid Margin="0,0,2,0">
         <Label Content="Courses Units :&#xD;&#xA;" HorizontalAlignment="Left" Margin="88,53,-96,0" VerticalAlignment="Top" Width="112" Height="47"/>
         <ListBox x:Name="units" HorizontalAlignment="Left" Height="217" Margin="88,105,-374,0" VerticalAlignment="Top" Width="390" MouseDoubleClick="EditUnit"/>
-        <Button x:Name="addUnits" Content="Add" HorizontalAlignment="Left" Margin="88,350,-147,0" VerticalAlignment="Top" Width="163" Height="32"/>
+        <Button x:Name="addUnits" Content="Add" HorizontalAlignment="Left" Margin="88,350,-147,0" VerticalAlignment="Top" Width="163" Height="32" Click="addUnit"/>
         <Button x:Name="removeUnits" Content="Remove" HorizontalAlignment="Left" Margin="313,350,-374,0" VerticalAlignment="Top" Width="165" Height="32"/>
 
     </Grid>

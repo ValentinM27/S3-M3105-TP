@@ -34,16 +34,15 @@ namespace TestLogic
             unit.Name = "UE1";
             unit.Coef = 8;
 
-            notebook.addUnit(unit);
+            notebook.AddUnit(unit);
 
             List<Unit> temp = new List<Unit>();
             temp.Add(unit);
             Unit[] res = temp.ToArray();
 
-            Assert.Equal(2, notebook.ListUnits().Length);
+            Assert.Single(notebook.ListUnits());
 
             Assert.Equal(res, notebook.ListUnits());
-
         }
     }
 }
