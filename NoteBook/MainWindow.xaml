@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Image HorizontalAlignment="Left" Height="232" Margin="229,96,0,0" VerticalAlignment="Top" Width="349" Source="book.jpg" Stretch="Fill"/>
-        <Button x:Name="inputPedagogical" Content="Saisir les matières" HorizontalAlignment="Left" Margin="41,38,0,0" VerticalAlignment="Top" Width="157"/>
+        <Button x:Name="inputPedagogical" Content="Saisir les matières" HorizontalAlignment="Left" Margin="41,38,0,0" VerticalAlignment="Top" Width="157" Click="GoEditUnits"/>
         <Button x:Name="showAvg" Content="Afficher les moyennes" HorizontalAlignment="Left" Margin="301,364,0,0" VerticalAlignment="Top" Width="205"/>
         <Button x:Name="inputExam" Content="Rentrer un examen " HorizontalAlignment="Left" Margin="594,38,0,0" VerticalAlignment="Top" Width="139"/>
 
