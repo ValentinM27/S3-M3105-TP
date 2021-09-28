@@ -44,5 +44,35 @@ namespace TestLogic
 
             Assert.Equal(res, notebook.ListUnits());
         }
+
+
+        //Test la suppression d'une unité
+        [Fact]
+        public void TestRemoveUnit()
+        {
+
+            Logic.NoteBook notebook = new Logic.NoteBook();
+
+            Logic.Unit unit = new Logic.Unit();
+
+            unit.Name = "UE1";
+            unit.Coef = 8;
+
+            notebook.AddUnit(unit);
+
+            List<Unit> temp = new List<Unit>();
+            temp.Add(unit);
+            Unit[] res = temp.ToArray();
+
+            //On test l'ajout de l'unit
+            Assert.Equal(res, notebook.ListUnits());
+
+            notebook.RemoveUnit(unit);
+
+            Unit[] emptyRes = { };
+
+            //On test la suppression de l'unit 
+            Assert.Equal(emptyRes, notebook.ListUnits());
+        }
     }
 }
