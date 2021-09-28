@@ -42,6 +42,11 @@ namespace Logic
         {
             return this.units.ToArray();
         }
+
+        public void addUnit(Unit unit)
+        {
+            this.units.Add(unit);
+        }
     }
 }
  

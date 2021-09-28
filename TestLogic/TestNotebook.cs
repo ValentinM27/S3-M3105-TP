@@ -8,7 +8,7 @@ namespace TestLogic
 {
     public class TestNotebook
     {
-        //Test les contrainte de Name
+        //Test ListUnits()
         [Fact]
         public void TestListUnits()
         {
@@ -20,6 +20,30 @@ namespace TestLogic
             Unit[] res = notebook.ListUnits();
 
             Assert.Equal(res, notebook.ListUnits());
+        }
+
+        //Test l'ajout d'une unité
+        [Fact]
+        public void TestAddUnit()
+        {
+
+            Logic.NoteBook notebook = new Logic.NoteBook();
+
+            Logic.Unit unit = new Logic.Unit();
+
+            unit.Name = "UE1";
+            unit.Coef = 8;
+
+            notebook.addUnit(unit);
+
+            List<Unit> temp = new List<Unit>();
+            temp.Add(unit);
+            Unit[] res = temp.ToArray();
+
+            Assert.Equal(2, notebook.ListUnits().Length);
+
+            Assert.Equal(res, notebook.ListUnits());
+
         }
     }
 }
