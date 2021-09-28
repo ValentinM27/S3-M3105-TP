@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Logic;
 
 namespace NoteBook
 {
@@ -22,7 +23,26 @@ namespace NoteBook
     {
         public MainWindow()
         {
+            this.notebook = new Logic.NoteBook();
             InitializeComponent();
+        }
+
+        private Logic.NoteBook notebook;
+
+        public Logic.NoteBook Notebook
+        {
+            get => this.notebook;
+
+            set
+            {
+                this.notebook = value;
+            }
+        }
+
+        private void GoEditUnits(object sender, RoutedEventArgs e)
+        {
+            EditUnitsWindow second = new EditUnitsWindow(this.notebook) ;
+            second.Show();
         }
     }
 }

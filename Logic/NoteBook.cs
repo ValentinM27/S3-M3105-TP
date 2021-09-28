@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
-    class NoteBook
+    public class NoteBook
     {
         //Liste de Unit
-        private List<Unit> units;
+        private List<Unit> units = new List<Unit>();
 
         public List<Unit> Units
         {
@@ -22,7 +22,7 @@ namespace Logic
         }
 
         //Liste des examens
-        private List<Exam> exams;
+        private List<Exam> exams = new List<Exam>();
 
         public List<Exam> Exams
         {
@@ -34,5 +34,32 @@ namespace Logic
             }
         }
 
+        /// <summary>
+        /// Permet d'obtenir la liste des units
+        /// </summary>
+        /// <returns>Liste de units</returns>
+        public Unit[] ListUnits()
+        {
+            return this.units.ToArray();
+        }
+
+        /// <summary>
+        /// Permet d'ajouter une unité
+        /// </summary>
+        /// <param name="unit"></param>
+        public void AddUnit(Unit unit)
+        {
+            this.units.Add(unit);
+        }
+
+        /// <summary>
+        /// Permet de supprimer une unité
+        /// </summary>
+        /// <param name="unit"></param>
+        public void RemoveUnit(Unit unit)
+        {
+            this.units.Remove(unit);
+        }
     }
 }
+ 

@@ -39,5 +39,10 @@ namespace Logic
             }
 
         }
+
+        public override string ToString()
+        {
+            return this.name + " ("+this.coef+") ";
+        }
     }
 }
