@@ -91,5 +91,26 @@ namespace NoteBook
                 MessageBox.Show(x.Message);
             }
         }
+
+        /// <summary>
+        /// Permet de supprimer une unité
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RemoveUnit(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (units.SelectedItem is Unit unit)
+                {
+                    notebook.RemoveUnit(unit);
+                    DrawUnits();
+                }
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show(x.Message);
+            }
+        }
     }
 }

@@ -43,9 +43,22 @@ namespace Logic
             return this.units.ToArray();
         }
 
+        /// <summary>
+        /// Permet d'ajouter une unité
+        /// </summary>
+        /// <param name="unit"></param>
         public void AddUnit(Unit unit)
         {
             this.units.Add(unit);
+        }
+
+        /// <summary>
+        /// Permet de supprimer une unité
+        /// </summary>
+        /// <param name="unit"></param>
+        public void RemoveUnit(Unit unit)
+        {
+            this.units.Remove(unit);
         }
     }
 }
