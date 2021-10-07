@@ -112,5 +112,27 @@ namespace NoteBook
                 MessageBox.Show(x.Message);
             }
         }
+
+        /// <summary>
+        /// Permet d'afficher la liste des modules
+        /// </summary>
+        private void DrawModules()
+        {
+            if(units.SelectedItem is Unit unit)
+            {
+                var list = unit.ListModules();
+                modulesList.Items.Clear();
+
+                foreach(Module m in list)
+                {
+                    modulesList.Items.Add(m);
+                }
+            }
+        }
+
+        private void units_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DrawModules();
+        }
     }
 }
