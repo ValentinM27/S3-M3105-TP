@@ -152,6 +152,11 @@ namespace NoteBook
             }
         }
 
+        /// <summary>
+        /// Permet de créer un module
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CreateModule(object sender, RoutedEventArgs e)
         {
             try
@@ -172,6 +177,30 @@ namespace NoteBook
                 MessageBox.Show(x.Message);
             }
 
+        }
+
+        /// <summary>
+        /// Permet de supprimer un module
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Remove(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (units.SelectedItem is Unit unit)
+                {
+                    if (modulesList.SelectedItem is Module module)
+                    {
+                        unit.Remove(module);
+                    }
+                    DrawUnits();
+                }
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show(x.Message);
+            }
         }
     }
 }

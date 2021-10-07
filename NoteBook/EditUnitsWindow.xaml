@@ -15,7 +15,7 @@
         <Label Content="Modules :" HorizontalAlignment="Left" Margin="527,52,0,0" VerticalAlignment="Top" Width="79"/>
         <Button x:Name="addUnits_Copy" Content="Add" HorizontalAlignment="Left" Margin="36,350,0,0" VerticalAlignment="Top" Width="163" Height="32" Click="addUnit"/>
         <Button x:Name="addModules" Content="Add" HorizontalAlignment="Left" Margin="527,350,0,0" VerticalAlignment="Top" Width="165" Height="32" Click="CreateModule"/>
-        <Button x:Name="removeModules" Content="Remove" HorizontalAlignment="Left" Margin="748,350,0,0" VerticalAlignment="Top" Width="165" Height="32"/>
+        <Button x:Name="removeModules" Content="Remove" HorizontalAlignment="Left" Margin="748,350,0,0" VerticalAlignment="Top" Width="165" Height="32" Click="Remove"/>
 
     </Grid>
 </Window>

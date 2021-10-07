@@ -41,5 +41,14 @@ namespace Logic
         {
             this.modules.Add(m);
         }
+
+        /// <summary>
+        /// Permet de supprimer un module
+        /// </summary>
+        /// <param name="m"></param>
+        public void Remove(Module m)
+        {
+            this.modules.Remove(m);
+        }
     }
 }
