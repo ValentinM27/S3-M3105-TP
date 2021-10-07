@@ -134,5 +134,73 @@ namespace NoteBook
         {
             DrawModules();
         }
+
+        /// <summary>
+        /// Permet de modifier un modules
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void EditModules(object sender, MouseButtonEventArgs e)
+        {
+            if (modulesList.SelectedItem is Module m)
+            {
+                EditElementWindow third = new EditElementWindow(m);
+                if (third.ShowDialog() == true)
+                {
+                    DrawUnits();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Permet de créer un module
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CreateModule(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Module newModule = new Module();
+                EditElementWindow third = new EditElementWindow(newModule);
+                if (third.ShowDialog() == true)
+                {
+                    if (units.SelectedItem is Unit unit)
+                    {
+                        unit.Add(newModule);
+                    }                    
+                    DrawUnits();
+                }
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show(x.Message);
+            }
+
+        }
+
+        /// <summary>
+        /// Permet de supprimer un module
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Remove(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (units.SelectedItem is Unit unit)
+                {
+                    if (modulesList.SelectedItem is Module module)
+                    {
+                        unit.Remove(module);
+                    }
+                    DrawUnits();
+                }
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show(x.Message);
+            }
+        }
     }
 }
