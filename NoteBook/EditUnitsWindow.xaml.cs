@@ -134,5 +134,22 @@ namespace NoteBook
         {
             DrawModules();
         }
+
+        /// <summary>
+        /// Permet de modifier un modules
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void EditModules(object sender, MouseButtonEventArgs e)
+        {
+            if (modulesList.SelectedItem is Module m)
+            {
+                EditElementWindow third = new EditElementWindow(m);
+                if (third.ShowDialog() == true)
+                {
+                    DrawUnits();
+                }
+            }
+        }
     }
 }

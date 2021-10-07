@@ -11,14 +11,6 @@ namespace Logic
     /// </summary>
     public class Unit : PedagogicalElement
     {
-        public Unit()
-        {
-            Module test = new Module();
-            test.Name = "test";
-            test.Coef = 1;
-            modules.Add(test);
-        }
-
         //Liste des modules
         private List<Module> modules = new List<Module>();
 
@@ -39,6 +31,15 @@ namespace Logic
         public Module[] ListModules()
         {
             return this.modules.ToArray();
+        }
+
+        /// <summary>
+        /// Permet d'ajouter un module
+        /// </summary>
+        /// <param name="m"></param>
+        public void Add(Module m)
+        {
+            this.modules.Add(m);
         }
     }
 }
