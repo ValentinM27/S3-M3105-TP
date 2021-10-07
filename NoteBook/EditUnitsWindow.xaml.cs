@@ -151,5 +151,27 @@ namespace NoteBook
                 }
             }
         }
+
+        private void CreateModule(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Module newModule = new Module();
+                EditElementWindow third = new EditElementWindow(newModule);
+                if (third.ShowDialog() == true)
+                {
+                    if (units.SelectedItem is Unit unit)
+                    {
+                        unit.Add(newModule);
+                    }                    
+                    DrawUnits();
+                }
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show(x.Message);
+            }
+
+        }
     }
 }
