@@ -202,5 +202,10 @@ namespace NoteBook
                 MessageBox.Show(x.Message);
             }
         }
+
+        private void modulesList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -11,7 +11,19 @@ namespace Logic
     /// </summary>
     public class Exam
     {
+        //Module de l'examen
         private Module module;
+
+        public Module Module
+        {
+            get => this.module;
+
+            set
+            {
+                if (value == null) throw new Exception("Module doit être non nul");
+                this.module = value;
+            }
+        }
 
         //Nom de l'enseignant
         private String teacher;
@@ -22,7 +34,7 @@ namespace Logic
             
             set
             {
-                if (value == null || value == "") throw new Exception("Teacher");
+                if (value == null || value == "") throw new Exception("Teacher doit être non nul");
                 this.teacher = value;
             }
         }
