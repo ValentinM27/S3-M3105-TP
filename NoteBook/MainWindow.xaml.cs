@@ -39,9 +39,25 @@ namespace NoteBook
             }
         }
 
+        /// <summary>
+        /// Permet d'afficher l'interface de gestion des unités
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GoEditUnits(object sender, RoutedEventArgs e)
         {
             EditUnitsWindow second = new EditUnitsWindow(this.notebook) ;
+            second.Show();
+        }
+
+        /// <summary>
+        /// Permet d'afficher l'interfadce de gestion des examens
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void GoExamWindow(object sender, RoutedEventArgs e)
+        {
+            EditExamWindow second = new EditExamWindow(this.notebook);
             second.Show();
         }
     }

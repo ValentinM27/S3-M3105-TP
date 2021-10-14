@@ -10,14 +10,16 @@
         <ComboBox x:Name="moduleSelect" HorizontalAlignment="Left" Margin="80,73,0,0" VerticalAlignment="Top" Width="279" Height="48"/>
         <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="505,73,0,0" VerticalAlignment="Top" Height="48" Width="250"/>
         <CheckBox x:Name="absentCheck" Content="Absent" HorizontalAlignment="Left" Margin="17,156,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.802,-0.685" Height="26" Width="126"/>
-        <Button x:Name="cancelBtn" Content="Cancel" HorizontalAlignment="Left" Margin="449,338,0,0" VerticalAlignment="Top" Width="193" Height="47" RenderTransformOrigin="-0.127,-0.18"/>
-        <Button x:Name="validateBtn" Content="Validate" HorizontalAlignment="Left" Margin="166,338,0,0" VerticalAlignment="Top" Width="193" Height="47"/>
+        <Button x:Name="cancelBtn" Content="Cancel" HorizontalAlignment="Left" Margin="449,338,0,0" VerticalAlignment="Top" Width="193" Height="47" RenderTransformOrigin="-0.127,-0.18" Click="Cancel"/>
+        <Button x:Name="validateBtn" Content="Validate" HorizontalAlignment="Left" Margin="166,338,0,0" VerticalAlignment="Top" Width="193" Height="47" Click="Validate"/>
         <Label Content="Module :&#xD;&#xA;" HorizontalAlignment="Left" Margin="17,73,0,0" VerticalAlignment="Top" Width="58" RenderTransformOrigin="0.212,0.254"/>
         <Label Content="Teacher :" HorizontalAlignment="Left" Margin="433,156,0,0" VerticalAlignment="Top"/>
         <Label Content="Date :&#xD;&#xA;" HorizontalAlignment="Left" Margin="449,72,0,0" VerticalAlignment="Top" Width="56"/>
         <Label Content="Score :" HorizontalAlignment="Left" Margin="17,212,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="teacherBox" HorizontalAlignment="Left" Height="39" Margin="505,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
         <TextBox x:Name="scoreBox" HorizontalAlignment="Left" Height="23" Margin="80,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="coefBox" HorizontalAlignment="Left" Height="26" Margin="95,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"/>
+        <Label Content="Coefficient :" HorizontalAlignment="Left" Margin="17,259,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.284,-0.325"/>
 
     </Grid>
 </Window>
