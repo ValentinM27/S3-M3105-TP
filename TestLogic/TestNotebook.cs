@@ -109,5 +109,17 @@ namespace TestLogic
             notebook.AddExam(exam);
             Assert.Single(notebook.Exams);
         }
+
+        [Fact]
+        public void TestListExam()
+        {
+            Logic.NoteBook notebook = new NoteBook();
+            Logic.Exam exam = new Exam();
+
+            notebook.AddExam(exam);
+
+            Assert.Single(notebook.ListExams());
+            Assert.Equal(notebook.Exams, notebook.ListExams());
+        }
     }
 }

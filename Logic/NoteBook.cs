@@ -85,6 +85,15 @@ namespace Logic
         {
             this.exams.Add(e);
         }
+
+        /// <summary>
+        /// Retourne la liste des examens 
+        /// </summary>
+        /// <returns></returns>
+        public Exam[] ListExams()
+        {
+            return this.exams.ToArray();
+        }
     }
 }
  
