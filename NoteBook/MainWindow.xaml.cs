@@ -60,5 +60,16 @@ namespace NoteBook
             EditExamWindow second = new EditExamWindow(this.notebook);
             second.Show();
         }
+
+        /// <summary>
+        /// Permet d'afficher l'interface de listing des examens
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void GoListExam(object sender, RoutedEventArgs e)
+        {
+            ListExamsWindow second = new ListExamsWindow(this.notebook);
+            second.Show();
+        }
     }
 }

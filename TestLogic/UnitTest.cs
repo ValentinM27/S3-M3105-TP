@@ -22,6 +22,10 @@ namespace TestLogic
             Assert.Equal(resModules, unit.ListModules());
         }
 
+
+        /// <summary>
+        /// Test de addModules
+        /// </summary>
         [Fact]
         public void TestAddModules()
         {
@@ -40,6 +44,15 @@ namespace TestLogic
             Module[] tableModule = listModule.ToArray();
 
             Assert.Equal(tableModule, unit.ListModules());
+        }
+
+        /// <summary>
+        /// Test la fonction ComputeAverage 
+        /// </summary>
+        [Fact]
+        public void testComputeAverage()
+        {
+            
         }
     }
 }
