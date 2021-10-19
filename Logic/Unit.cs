@@ -50,5 +50,26 @@ namespace Logic
         {
             this.modules.Remove(m);
         }
+
+        /// <summary>
+        /// Permet de calculer la moyenne de tout les examens d'une Unit en fonction des modules
+        /// </summary>
+        /// <param name="exams"></param>
+        /// <returns></returns>
+        public AvgScore[] ComputeAverage(Exam[] exams)
+        {
+            List<AvgScore> avgScores = new List<AvgScore>();
+
+            foreach(Module module in Modules)
+            {
+                AvgScore avgScore = module.ComputeAverage(exams);
+                if(avgScore != null)
+                {
+                    avgScores.Add(avgScore);
+                }
+            }
+
+            return avgScores.ToArray();
+        }
     }
 }
