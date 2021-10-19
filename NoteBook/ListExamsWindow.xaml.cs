@@ -38,6 +38,9 @@ namespace NoteBook
             }
         }
 
+        /// <summary>
+        ///Permet de remplir la liste des examens
+        /// </summary>
         private void DrawExams()
         {
             exams.Items.Clear();
