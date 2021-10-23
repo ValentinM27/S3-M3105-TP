@@ -107,24 +107,24 @@ namespace Logic
             float totalCoef = 0;
 
             //On traite Unit par Unit dans la liste des Unit du Notebook
-            foreach(Unit u in this.units)
+            foreach (Unit u in this.units)
             {
                 var listExams = u.ComputeAverage(this.exams.ToArray());
                 float score = 0;
                 float coef = 0;
 
                 //On traite examen par examen dans la liste des moyenne de l'unit 
-                foreach(var e in listExams)
+                foreach (var e in listExams)
                 {
                     score += e.Average * e.PedagogicalName.Coef;
                     coef += e.PedagogicalName.Coef;
                 }
-                if(coef != 0)
+                if (coef != 0)
                 {
                     float avgScore = score / coef;
                     AvgScore avg = new AvgScore(avgScore, u);
                     avgScores.Add(avg);
-                    totalScore += avgScore;
+                    totalScore += avgScore * u.Coef;
                     totalCoef += u.Coef;
                 }
             }
@@ -133,7 +133,7 @@ namespace Logic
             if (totalCoef != 0)
             {
                 PedagogicalElement generalPE = new PedagogicalElement() { Coef = 1, Name = "generalPE" };
-                AvgScore finalAvgScore = new AvgScore(totalScore * totalCoef / totalCoef, generalPE);
+                AvgScore finalAvgScore = new AvgScore(totalScore / totalCoef, generalPE);
                 avgScores.Add(finalAvgScore);
             }
 
