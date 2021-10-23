@@ -31,7 +31,7 @@ namespace Logic
         //Retourne la note moyenne ainsi que la nom de l'élément
         public override String ToString()
         {
-            return "Nom du module: " + this.pedagogicalName + " Moyenne: " + this.average.ToString();
+            return "Nom du module: " + this.pedagogicalName.Name + " Moyenne: " + this.average.ToString();
         }
     }
 }

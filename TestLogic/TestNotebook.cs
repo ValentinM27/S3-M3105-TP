@@ -146,13 +146,35 @@ namespace TestLogic
             unit1.Add(module1);
             unit1.Add(module2);
 
+            float averageM1 = (20f*2f + 18f*3.5f) / 5.5f;
+            float averageM2 = (8f * 17f + 5f * 14f) / 13f;
+
+            float averageU1 = (averageM1 * 2f + averageM2 * 5f) / 7f;
+
             notebook.AddUnit(unit1);
             notebook.AddExam(exam1);
             notebook.AddExam(exam2);
             notebook.AddExam(exam3);
             notebook.AddExam(exam4);
 
+            Logic.Unit unit2 = new Unit() { Coef = 8, Name = "Unit2" };
+            Logic.Module module3 = new Module() { Coef = 12, Name = "La prog c'est fatiguant" };
+            Logic.Exam exam5 = new Exam() { Coef = 4, Module = module3, Score = 20f };
+            unit2.Add(module3);
+            notebook.AddUnit(unit2);
+            notebook.AddExam(exam5);
 
+            List<Exam> listExam = new List<Exam>() { exam1, exam2, exam3, exam4, exam5 };
+
+            AvgScore[] avgScore = notebook.ComputeScores();
+            Assert.NotNull(avgScore);
+
+            Assert.Same(unit1, avgScore[0].PedagogicalName);
+            Assert.Same(unit2, avgScore[1].PedagogicalName);
+            //Test la moyenne de l'unit 2 (Qui est de 20 cf : Exam5)
+            Assert.Equal(20f, avgScore[1].Average, 2);
+            //Test la moyenne de l'unti 1 
+            Assert.Equal(averageU1, avgScore[0].Average, 2);
         }
     }
 }
