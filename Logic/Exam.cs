@@ -61,7 +61,7 @@ namespace Logic
 
             set
             {
-                if (value < 0) throw new Exception("Coef mut be >= 0");
+                if (value < 0) throw new Exception("Coef must be >= 0");
                 this.coef = value;
             }
         }
@@ -76,7 +76,7 @@ namespace Logic
             set
             {
                 this.isAbsent = value;
-                if(value == false)
+                if(value == true)
                 {
                     this.Score = 0;
                 }

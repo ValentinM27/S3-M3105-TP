@@ -9,7 +9,7 @@
     <Grid Margin="0,0,2,0">
         <Label Content="Name :&#xD;&#xA;" HorizontalAlignment="Left" Margin="31,83,0,0" VerticalAlignment="Top" Width="88"/>
         <Label Content="Coeficient :&#xD;&#xA;" HorizontalAlignment="Left" Margin="31,202,0,0" VerticalAlignment="Top" Width="88"/>
-        <TextBox x:Name="nameBox" HorizontalAlignment="Left" Height="43" Margin="108,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="nameBox" HorizontalAlignment="Left" Height="43" Margin="108,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="241"/>
         <TextBox x:Name="coefBox" HorizontalAlignment="Left" Height="42" Margin="108,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="241"/>
         <Button x:Name="validateButton" Content="Valider" HorizontalAlignment="Left" Margin="108,335,0,0" VerticalAlignment="Top" Width="241" Height="41" Click="Validate"/>
 

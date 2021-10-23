@@ -40,11 +40,6 @@ namespace NoteBook
             }
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void Validate(object sender, RoutedEventArgs e)
         {
             try
