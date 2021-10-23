@@ -133,7 +133,7 @@ namespace Logic
             if (totalCoef != 0)
             {
                 PedagogicalElement generalPE = new PedagogicalElement() { Coef = 1, Name = "generalPE" };
-                AvgScore finalAvgScore = new AvgScore(totalScore / totalCoef, generalPE);
+                AvgScore finalAvgScore = new AvgScore(totalScore * totalCoef / totalCoef, generalPE);
                 avgScores.Add(finalAvgScore);
             }
 
