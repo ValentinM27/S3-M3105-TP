@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="ListExamsWindow" Height="519.697" Width="800">
     <Grid>
-        <ListBox x:Name="exams" HorizontalContentAlignment="Stretch" Margin="123,10,106,204">
+        <ListBox x:Name="exams" HorizontalContentAlignment="Stretch" Margin="123,40,0,204" HorizontalAlignment="Left" Width="563">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -17,7 +17,7 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Content="{Binding DateExam}" />
+                        <Label Grid.Column="0" Content="{Binding DateTime}" />
                         <Label Grid.Column="1" Content="{Binding Module.Name}" />
                         <Label Grid.Column="2" Content="{Binding Teacher}" />
                         <Label Grid.Column="3" Content="{Binding Score}" />
@@ -27,6 +27,10 @@
         </ListBox>
         <ListBox x:Name="scores" HorizontalAlignment="Left" Height="102" Margin="123,306,0,0" VerticalAlignment="Top" Width="563"/>
         <Button x:Name="closeBtn" Content="Close" HorizontalAlignment="Left" Margin="311,431,0,0" VerticalAlignment="Top" Width="187" Height="35" Click="Close"/>
+        <Label Content="Matière" HorizontalAlignment="Left" Margin="253,10,0,0" VerticalAlignment="Top" Width="53"/>
+        <Label Content="Enseignant" HorizontalAlignment="Left" Margin="391,10,0,0" VerticalAlignment="Top" Width="67"/>
+        <Label Content="Score" HorizontalAlignment="Left" Margin="538,9,0,0" VerticalAlignment="Top" Width="67"/>
+        <Label Content="Date" HorizontalAlignment="Left" Margin="150,10,0,0" VerticalAlignment="Top" Width="67"/>
 
     </Grid>
 </Window>
