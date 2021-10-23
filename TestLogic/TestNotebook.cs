@@ -124,5 +124,33 @@ namespace TestLogic
             Assert.Single(notebook.ListExams());
             Assert.Equal(notebook.Exams, notebook.ListExams());
         }
+
+        /// <summary>
+        /// Test la fonction ComputeAverage 
+        /// </summary>
+        [Fact]
+        public void testComputeAverage()
+        {
+            Logic.NoteBook notebook = new NoteBook();
+
+            Logic.Unit unit1 = new Unit() { Coef = 6, Name = "Unit1" };
+            Logic.Module module1 = new Module() { Coef = 2, Name = "Gestion" };
+
+            Logic.Exam exam1 = new Exam() { Coef = 2, Module = module1, Score = 20 };
+            Logic.Exam exam2 = new Exam() { Coef = 3.5f, Module = module1, Score = 18 };
+
+            Logic.Module module2 = new Module() { Coef = 5, Name = "Institution Politique" };
+            Logic.Exam exam3 = new Exam() { Coef = 8, Module = module2, Score = 17 };
+            Logic.Exam exam4 = new Exam() { Coef = 5, Module = module2, Score = 14 };
+
+            unit1.Add(module1);
+            unit1.Add(module2);
+
+            notebook.AddUnit(unit1);
+            notebook.AddExam(exam1);
+            notebook.AddExam(exam2);
+            notebook.AddExam(exam3);
+            notebook.AddExam(exam4);
+        }
     }
 }
