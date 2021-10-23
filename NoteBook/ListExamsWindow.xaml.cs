@@ -44,11 +44,21 @@ namespace NoteBook
         private void DrawExams()
         {
             exams.Items.Clear();
-
             foreach(Logic.Exam e in this.notebook.ListExams())
             {
                 exams.Items.Add(e);
             }
+
+            scores.Items.Clear();
+            foreach(Logic.AvgScore avg in notebook.ComputeScores())
+            {
+                scores.Items.Add(avg);
+            }
+        }
+
+        private void Close(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
