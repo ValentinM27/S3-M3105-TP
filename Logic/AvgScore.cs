@@ -10,7 +10,7 @@ namespace Logic
     {
         public AvgScore(float average, PedagogicalElement pe)
         {
-            this.pedagogicalName = pe.Name;
+            this.pedagogicalName = pe;
             this.average = average;
         }
 
@@ -19,22 +19,13 @@ namespace Logic
         public float Average
         {
             get => this.average;
-
-            set
-            {
-                this.average = value;
-            }
         }
 
-        private String pedagogicalName;
+        private PedagogicalElement pedagogicalName;
 
-        public String PedagogicalName
+        public PedagogicalElement PedagogicalName
         {
             get => this.pedagogicalName;
-            set
-            {
-                this.pedagogicalName = value;
-            }
         }
 
         //Retourne la note moyenne ainsi que la nom de l'élément

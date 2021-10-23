@@ -94,6 +94,51 @@ namespace Logic
         {
             return this.exams.ToArray();
         }
+
+        /// <summary>
+        /// Retourne les moyennes par unit d'un notebook
+        /// </summary>
+        /// <returns></returns>
+        public AvgScore[] ComputeScores()
+        {
+            List<AvgScore> avgScores = new List<AvgScore>();
+
+            float totalScore = 0;
+            float totalCoef = 0;
+
+            //On traite Unit par Unit dans la liste des Unit du Notebook
+            foreach(Unit u in this.units)
+            {
+                var listExams = u.ComputeAverage(this.exams.ToArray());
+                float score = 0;
+                float coef = 0;
+
+                //On traite examen par examen dans la liste des moyenne de l'unit 
+                foreach(var e in listExams)
+                {
+                    score += e.Average * e.PedagogicalName.Coef;
+                    coef += e.PedagogicalName.Coef;
+                }
+                if(coef != 0)
+                {
+                    float avgScore = score / coef;
+                    AvgScore avg = new AvgScore(avgScore, u);
+                    avgScores.Add(avg);
+                    totalScore += avgScore;
+                    totalCoef += u.Coef;
+                }
+            }
+
+            /* Si le coef global n'est pas nul on regroupe tout dans un nouveau PE */
+            if (totalCoef != 0)
+            {
+                PedagogicalElement generalPE = new PedagogicalElement() { Coef = 1, Name = "generalPE" };
+                AvgScore finalAvgScore = new AvgScore(totalScore / totalCoef, generalPE);
+                avgScores.Add(finalAvgScore);
+            }
+
+            return avgScores.ToArray();
+        }
     }
 }
  
