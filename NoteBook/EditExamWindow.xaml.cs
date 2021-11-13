@@ -20,14 +20,16 @@ namespace NoteBook
     public partial class EditExamWindow : Window
     {
         private Logic.NoteBook notebook;
-        public EditExamWindow(Logic.NoteBook nb)
+        public EditExamWindow(Logic.NoteBook nb, Logic.IStorage storage)
         {
             InitializeComponent();
             this.notebook = nb;
             DrawModules(this.notebook.ListModules());
             this.notebook.ListModules().ToString();
-            
+            this.storage = storage;
         }
+
+        private Logic.IStorage storage;
          
         /// <summary>
         /// Permet d'initialiser la liste des modules
@@ -60,6 +62,7 @@ namespace NoteBook
                 exam.Coef = (float)Convert.ToDouble(coefBox.Text);
 
                 this.notebook.AddExam(exam);
+                this.storage.Save(notebook);
                 Close();
             }
             catch (Exception ex)

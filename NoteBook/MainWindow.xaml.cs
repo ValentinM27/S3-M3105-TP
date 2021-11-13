@@ -23,8 +23,9 @@ namespace NoteBook
     {
         public MainWindow()
         {
-            this.notebook = new Logic.NoteBook();
             InitializeComponent();
+            this.storage = new Storage.JsonStorage("notebook1.json");
+            this.notebook = storage.Load();
         }
 
         private Logic.NoteBook notebook;
@@ -39,6 +40,9 @@ namespace NoteBook
             }
         }
 
+        private IStorage storage;
+
+
         /// <summary>
         /// Permet d'afficher l'interface de gestion des unités
         /// </summary>
@@ -46,7 +50,7 @@ namespace NoteBook
         /// <param name="e"></param>
         private void GoEditUnits(object sender, RoutedEventArgs e)
         {
-            EditUnitsWindow second = new EditUnitsWindow(this.notebook) ;
+            EditUnitsWindow second = new EditUnitsWindow(this.notebook, this.storage) ;
             second.Show();
         }
 
@@ -57,7 +61,7 @@ namespace NoteBook
         /// <param name="e"></param>
         private void GoExamWindow(object sender, RoutedEventArgs e)
         {
-            EditExamWindow second = new EditExamWindow(this.notebook);
+            EditExamWindow second = new EditExamWindow(this.notebook, this.storage);
             second.Show();
         }
 

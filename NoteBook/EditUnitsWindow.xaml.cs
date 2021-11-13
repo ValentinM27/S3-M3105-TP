@@ -20,12 +20,15 @@ namespace NoteBook
     /// </summary>
     public partial class EditUnitsWindow : Window
     {
-        public EditUnitsWindow(Logic.NoteBook notebook)
+        public EditUnitsWindow(Logic.NoteBook notebook, Logic.IStorage storage)
         {
             InitializeComponent();
             this.notebook = notebook;
             this.DrawUnits();
+            this.storage = storage;
         }
+
+        private Logic.IStorage storage;
 
         private Logic.NoteBook notebook;
 
@@ -64,6 +67,7 @@ namespace NoteBook
                 if (third.ShowDialog() == true)
                 {
                     DrawUnits();
+                    this.storage.Save(Notebook);
                 }
             }
 
@@ -84,6 +88,7 @@ namespace NoteBook
                 {
                     notebook.AddUnit(newUnit);
                     DrawUnits();
+                    this.storage.Save(notebook);
                 }
             }
             catch (Exception x)
@@ -105,6 +110,7 @@ namespace NoteBook
                 {
                     notebook.RemoveUnit(unit);
                     DrawUnits();
+                    this.storage.Save(notebook);
                 }
             }
             catch (Exception x)
@@ -148,6 +154,7 @@ namespace NoteBook
                 if (third.ShowDialog() == true)
                 {
                     DrawUnits();
+                    this.storage.Save(notebook);
                 }
             }
         }
@@ -170,6 +177,7 @@ namespace NoteBook
                         unit.Add(newModule);
                     }                    
                     DrawUnits();
+                    this.storage.Save(notebook);
                 }
             }
             catch (Exception x)
@@ -195,17 +203,13 @@ namespace NoteBook
                         unit.Remove(module);
                     }
                     DrawUnits();
+                    this.storage.Save(notebook);
                 }
             }
             catch (Exception x)
             {
                 MessageBox.Show(x.Message);
             }
-        }
-
-        private void modulesList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
     }
 }

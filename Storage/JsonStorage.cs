@@ -61,12 +61,12 @@ namespace Storage
         /// Logiaue de fonctionnement : On ouvre un flux d'écriture et grace au serializer, on 
         /// stock les data du notebook passé en paramètre 
         /// </summary>
-        /// <param name="nb">Notebook à enregister</param>
+        /// <param name="nb">Notebook à enregister </param>
         public void Save(NoteBook nb)
         {
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(Logic.NoteBook));
 
-            using (FileStream stream = new FileStream(this.fileName, FileMode.Open))
+            using (FileStream stream = new FileStream(this.fileName, FileMode.Create))
             {
                 serializer.WriteObject(stream, nb);
             }
