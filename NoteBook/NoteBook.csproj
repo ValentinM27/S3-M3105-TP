@@ -130,6 +130,10 @@
       <Project>{3de7de03-f7fd-4c73-95ce-b097197d0e04}</Project>
       <Name>Logic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Storage\Storage.csproj">
+      <Project>{0805c2c6-8c99-4dd6-ab86-255fc9d10462}</Project>
+      <Name>Storage</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
