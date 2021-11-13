@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AvgScore.cs" />
     <Compile Include="Exam.cs" />
+    <Compile Include="IStorage.cs" />
     <Compile Include="Module.cs" />
     <Compile Include="NoteBook.cs" />
     <Compile Include="PedagogicalElement.cs" />
