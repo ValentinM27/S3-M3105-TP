@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteBook", "NoteBook\NoteBo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{3DE7DE03-F7FD-4C73-95CE-B097197D0E04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLogic", "TestLogic\TestLogic.csproj", "{FDD72962-1AE3-4676-A2E7-45D71EE4B5EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestLogic", "TestLogic\TestLogic.csproj", "{FDD72962-1AE3-4676-A2E7-45D71EE4B5EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storage", "Storage\Storage.csproj", "{0805C2C6-8C99-4DD6-AB86-255FC9D10462}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{FDD72962-1AE3-4676-A2E7-45D71EE4B5EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDD72962-1AE3-4676-A2E7-45D71EE4B5EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDD72962-1AE3-4676-A2E7-45D71EE4B5EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0805C2C6-8C99-4DD6-AB86-255FC9D10462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0805C2C6-8C99-4DD6-AB86-255FC9D10462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0805C2C6-8C99-4DD6-AB86-255FC9D10462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0805C2C6-8C99-4DD6-AB86-255FC9D10462}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

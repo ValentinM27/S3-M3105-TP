@@ -21,7 +21,6 @@ namespace Logic
         /// Permet de sauvegarder un notebook
         /// </summary>
         /// <param name="nb"></param>
-        /// <returns></returns>
-        Logic.NoteBook Save(Logic.NoteBook nb)
+        void Save(Logic.NoteBook nb)
 ;    }
 }
