@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NoteBook"
         mc:Ignorable="d"
-        Title="Modifier un module" Height="450" Width="395.845" WindowStartupLocation="CenterScreen">
+        Title="Modifier un module" Height="450" Width="395.845" WindowStartupLocation="CenterScreen" Icon="book.jpg">
     <Grid Background="#3b3b3b" Margin="0,0,2,0">
         <Label Content="Name :&#xD;&#xA;" HorizontalAlignment="Left" Margin="20,121,0,0" VerticalAlignment="Top" Width="88" FontWeight="Bold" Foreground="White"/>
         <Label Content="Coeficient :&#xD;&#xA;" HorizontalAlignment="Left" Margin="15,239,0,0" VerticalAlignment="Top" Width="88" FontWeight="Bold" Foreground="White"/>

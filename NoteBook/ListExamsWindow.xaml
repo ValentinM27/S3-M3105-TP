@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NoteBook"
         mc:Ignorable="d"
-        Title="Liste des examens" Height="519.697" Width="800" ResizeMode="CanResize" WindowStartupLocation="CenterScreen">
+        Title="Liste des examens" Height="519.697" Width="800" ResizeMode="CanResize" WindowStartupLocation="CenterScreen" Icon="book.jpg" >
     <Grid Background="#3b3b3b">
         <ListBox x:Name="exams" HorizontalContentAlignment="Stretch" Margin="123,40,0,204" HorizontalAlignment="Left" Width="563">
             <ListBox.ItemTemplate>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NoteBook"
         mc:Ignorable="d"
-        Title="Saisir un examen" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Saisir un examen" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="book.jpg">
     <Grid Background="#3b3b3b">
         <ComboBox x:Name="moduleSelect" HorizontalAlignment="Left" Margin="80,66,0,0" VerticalAlignment="Top" Width="279" Height="48"/>
         <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="80,145,0,0" VerticalAlignment="Top" Height="51" Width="279"/>
