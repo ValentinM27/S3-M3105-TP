@@ -51,7 +51,7 @@ namespace NoteBook
         private void GoEditUnits(object sender, RoutedEventArgs e)
         {
             EditUnitsWindow second = new EditUnitsWindow(this.notebook, this.storage) ;
-            second.Show();
+            second.ShowDialog();
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace NoteBook
         private void GoExamWindow(object sender, RoutedEventArgs e)
         {
             EditExamWindow second = new EditExamWindow(this.notebook, this.storage);
-            second.Show();
+            second.ShowDialog();
         }
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace NoteBook
         private void GoListExam(object sender, RoutedEventArgs e)
         {
             ListExamsWindow second = new ListExamsWindow(this.notebook);
-            second.Show();
+            second.ShowDialog();
         }
     }
 }

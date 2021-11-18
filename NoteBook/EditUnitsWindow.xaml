@@ -5,17 +5,60 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NoteBook"
         mc:Ignorable="d"
-        Title="EditUnitsWindow" Height="450" Width="961.023">
-    <Grid Margin="0,0,2,0">
-        <Label Content="Courses Units :&#xD;&#xA;" HorizontalAlignment="Left" Margin="36,58,0,0" VerticalAlignment="Top" Width="112" Height="25"/>
+        Title="Gestion des unités" Height="450" Width="961.023" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="book.jpg">
+    <Grid Background="#3b3b3b" Margin="0,0,2,0">
+        <Label Content="Courses Units :&#xD;&#xA;" HorizontalAlignment="Left" Margin="36,58,0,0" VerticalAlignment="Top" Width="112" Height="25" FontWeight="bold" Foreground="White"/>
         <ListBox x:Name="units" HorizontalAlignment="Left" Height="221" Margin="36,83,0,0" VerticalAlignment="Top" Width="390" MouseDoubleClick="EditUnit" SelectionChanged="units_SelectionChanged"/>
-        <Button x:Name="addUnits" Content="Add" HorizontalAlignment="Left" Margin="36,350,0,0" VerticalAlignment="Top" Width="163" Height="32" Click="addUnit"/>
-        <Button x:Name="removeUnits" Content="Remove" HorizontalAlignment="Left" Margin="261,350,0,0" VerticalAlignment="Top" Width="165" Height="32" Click="RemoveUnit"/>
-        <ListBox x:Name="modulesList" HorizontalAlignment="Left" Height="221" Margin="527,83,0,0" VerticalAlignment="Top" Width="386" MouseDoubleClick="EditModules"/>
-        <Label Content="Modules :" HorizontalAlignment="Left" Margin="527,52,0,0" VerticalAlignment="Top" Width="79"/>
-        <Button x:Name="addUnits_Copy" Content="Add" HorizontalAlignment="Left" Margin="36,350,0,0" VerticalAlignment="Top" Width="163" Height="32" Click="addUnit"/>
-        <Button x:Name="addModules" Content="Add" HorizontalAlignment="Left" Margin="527,350,0,0" VerticalAlignment="Top" Width="165" Height="32" Click="CreateModule"/>
-        <Button x:Name="removeModules" Content="Remove" HorizontalAlignment="Left" Margin="748,350,0,0" VerticalAlignment="Top" Width="165" Height="32" Click="Remove"/>
+        <Button x:Name="addUnits" Content="Add" HorizontalAlignment="Left" Margin="36,350,0,0" VerticalAlignment="Top" Width="163" Height="32" Click="addUnit"  FontWeight="bold" Foreground="White">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#fab237"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#70521d"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="removeUnits" Content="Remove" HorizontalAlignment="Left" Margin="261,350,0,0" VerticalAlignment="Top" Width="165" Height="32" Click="RemoveUnit"  FontWeight="bold" Foreground="White">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#fab237"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#70521d"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <ListBox x:Name="modulesList" HorizontalAlignment="Left" Height="221" Margin="523,83,0,0" VerticalAlignment="Top" Width="390" MouseDoubleClick="EditModules"/>
+        <Label Content="Modules :" HorizontalAlignment="Left" Margin="523,57,0,0" VerticalAlignment="Top" Width="79"  FontWeight="bold" Foreground="White"/>
+        <Button x:Name="addModules" Content="Add" HorizontalAlignment="Left" Margin="527,350,0,0" VerticalAlignment="Top" Width="165" Height="32" Click="CreateModule"  FontWeight="bold" Foreground="White">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#fab237"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#70521d"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="removeModules" Content="Remove" HorizontalAlignment="Left" Margin="748,350,0,0" VerticalAlignment="Top" Width="165" Height="32" Click="Remove" FontWeight="bold" Foreground="White">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#fab237"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#70521d"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
 
     </Grid>
 </Window>

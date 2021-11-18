@@ -5,13 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NoteBook"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Image HorizontalAlignment="Left" Height="232" Margin="229,96,0,0" VerticalAlignment="Top" Width="349" Source="book.jpg" Stretch="Fill"/>
-        <Button x:Name="inputPedagogical" Content="Saisir les matières" HorizontalAlignment="Left" Margin="41,38,0,0" VerticalAlignment="Top" Width="157" Click="GoEditUnits"/>
-        <Button x:Name="showAvg" Content="Afficher les moyennes" HorizontalAlignment="Left" Margin="301,364,0,0" VerticalAlignment="Top" Width="205"/>
-        <Button x:Name="inputExam" Content="Rentrer un examen " HorizontalAlignment="Left" Margin="594,38,0,0" VerticalAlignment="Top" Width="139" Click="GoExamWindow"/>
-        <Button Content="Liste des examens " HorizontalAlignment="Left" Margin="594,96,0,0" VerticalAlignment="Top" Width="139" Click="GoListExam"/>
+        Title="Page d'accueil" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="book.jpg">
+    <Grid Background="#3b3b3b">
+        <Button x:Name="inputPedagogical" Content="Saisir les matières" HorizontalAlignment="Left" Margin="43,67,0,0" VerticalAlignment="Top" Width="157" Click="GoEditUnits" Height="78"  FontWeight="bold" Foreground="White">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#fab237"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#70521d"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="inputExam" Content="Rentrer un examen " HorizontalAlignment="Left" Margin="311,67,0,0" VerticalAlignment="Top" Width="157" Click="GoExamWindow" Height="78"  FontWeight="bold" Foreground="White">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#fab237"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#70521d"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="Liste des examens " HorizontalAlignment="Left" Margin="586,67,0,0" VerticalAlignment="Top" Width="157" Click="GoListExam" Height="78"  FontWeight="bold" Foreground="White">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#fab237"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#70521d"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="244" Margin="255,167,0,0" VerticalAlignment="Top" Width="259" Source="kirby.png"/>
 
     </Grid>
 </Window>
