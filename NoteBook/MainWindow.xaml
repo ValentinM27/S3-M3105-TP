@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NoteBook"
         mc:Ignorable="d"
-        Title="Page d'acceuil" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Page d'accueil" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Background="#3b3b3b">
         <Button x:Name="inputPedagogical" Content="Saisir les matières" HorizontalAlignment="Left" Margin="43,67,0,0" VerticalAlignment="Top" Width="157" Click="GoEditUnits" Height="78"  FontWeight="bold" Foreground="White">
             <Button.Style>
