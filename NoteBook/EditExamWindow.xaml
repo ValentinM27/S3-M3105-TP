@@ -5,21 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NoteBook"
         mc:Ignorable="d"
-        Title="EditExamWindow" Height="450" Width="800">
-    <Grid>
-        <ComboBox x:Name="moduleSelect" HorizontalAlignment="Left" Margin="80,73,0,0" VerticalAlignment="Top" Width="279" Height="48"/>
-        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="505,73,0,0" VerticalAlignment="Top" Height="48" Width="250"/>
-        <CheckBox x:Name="absentCheck" Content="Absent" HorizontalAlignment="Left" Margin="17,156,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.802,-0.685" Height="26" Width="126"/>
-        <Button x:Name="cancelBtn" Content="Cancel" HorizontalAlignment="Left" Margin="449,338,0,0" VerticalAlignment="Top" Width="193" Height="47" RenderTransformOrigin="-0.127,-0.18" Click="Cancel"/>
-        <Button x:Name="validateBtn" Content="Validate" HorizontalAlignment="Left" Margin="166,338,0,0" VerticalAlignment="Top" Width="193" Height="47" Click="Validate"/>
-        <Label Content="Module :&#xD;&#xA;" HorizontalAlignment="Left" Margin="17,73,0,0" VerticalAlignment="Top" Width="58" RenderTransformOrigin="0.212,0.254"/>
-        <Label Content="Teacher :" HorizontalAlignment="Left" Margin="433,156,0,0" VerticalAlignment="Top"/>
-        <Label Content="Date :&#xD;&#xA;" HorizontalAlignment="Left" Margin="449,72,0,0" VerticalAlignment="Top" Width="56"/>
-        <Label Content="Score :" HorizontalAlignment="Left" Margin="17,212,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="teacherBox" HorizontalAlignment="Left" Height="39" Margin="505,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
-        <TextBox x:Name="scoreBox" HorizontalAlignment="Left" Height="23" Margin="80,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="coefBox" HorizontalAlignment="Left" Height="26" Margin="95,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"/>
-        <Label Content="Coefficient :" HorizontalAlignment="Left" Margin="17,259,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.284,-0.325"/>
+        Title="Saisir un examen" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="#3b3b3b">
+        <ComboBox x:Name="moduleSelect" HorizontalAlignment="Left" Margin="80,66,0,0" VerticalAlignment="Top" Width="279" Height="48"/>
+        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="80,145,0,0" VerticalAlignment="Top" Height="51" Width="279"/>
+        <CheckBox x:Name="absentCheck" Content="Absent" HorizontalAlignment="Left" Margin="80,290,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.802,-0.685" Height="26" Width="126" FontWeight="Bold" Foreground="White"/>
+        <Button x:Name="cancelBtn" Content="Cancel" HorizontalAlignment="Left" Margin="449,338,0,0" VerticalAlignment="Top" Width="193" Height="47" RenderTransformOrigin="-0.127,-0.18" Click="Cancel" FontWeight="Bold" Foreground="White">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#fab237"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#70521d"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="validateBtn" Content="Validate" HorizontalAlignment="Left" Margin="166,338,0,0" VerticalAlignment="Top" Width="193" Height="47" Click="Validate" FontWeight="Bold" Foreground="White">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#fab237"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#70521d"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Label Content="Module :&#xD;&#xA;" HorizontalAlignment="Left" Margin="17,66,0,0" VerticalAlignment="Top" Width="58" RenderTransformOrigin="0.212,0.254" FontWeight="Bold" Foreground="White"/>
+        <Label Content="Teacher :" HorizontalAlignment="Left" Margin="411,66,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
+        <Label Content="Date :&#xD;&#xA;" HorizontalAlignment="Left" Margin="17,144,0,0" VerticalAlignment="Top" Width="56" FontWeight="Bold" Foreground="White"/>
+        <Label Content="Score :" HorizontalAlignment="Left" Margin="17,233,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" RenderTransformOrigin="0.438,1.577"/>
+        <TextBox x:Name="teacherBox" HorizontalAlignment="Left" Height="49" Margin="476,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279" />
+        <TextBox x:Name="scoreBox" HorizontalAlignment="Left" Height="52" Margin="80,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279" />
+        <TextBox x:Name="coefBox" HorizontalAlignment="Left" Height="52" Margin="476,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279"/>
+        <Label Content="Coefficient :" HorizontalAlignment="Left" Margin="393,233,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.284,-0.325" FontWeight="Bold" Foreground="White"/>
 
     </Grid>
 </Window>

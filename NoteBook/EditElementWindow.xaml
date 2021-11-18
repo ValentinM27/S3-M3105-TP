@@ -5,13 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NoteBook"
         mc:Ignorable="d"
-        Title="EditElementWindow" Height="450" Width="395.845">
-    <Grid Margin="0,0,2,0">
-        <Label Content="Name :&#xD;&#xA;" HorizontalAlignment="Left" Margin="31,83,0,0" VerticalAlignment="Top" Width="88"/>
-        <Label Content="Coeficient :&#xD;&#xA;" HorizontalAlignment="Left" Margin="31,202,0,0" VerticalAlignment="Top" Width="88"/>
+        Title="Modifier un module" Height="450" Width="395.845" WindowStartupLocation="CenterScreen">
+    <Grid Background="#3b3b3b" Margin="0,0,2,0">
+        <Label Content="Name :&#xD;&#xA;" HorizontalAlignment="Left" Margin="20,121,0,0" VerticalAlignment="Top" Width="88" FontWeight="Bold" Foreground="White"/>
+        <Label Content="Coeficient :&#xD;&#xA;" HorizontalAlignment="Left" Margin="15,239,0,0" VerticalAlignment="Top" Width="88" FontWeight="Bold" Foreground="White"/>
         <TextBox x:Name="nameBox" HorizontalAlignment="Left" Height="43" Margin="108,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="241"/>
         <TextBox x:Name="coefBox" HorizontalAlignment="Left" Height="42" Margin="108,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="241"/>
-        <Button x:Name="validateButton" Content="Valider" HorizontalAlignment="Left" Margin="108,335,0,0" VerticalAlignment="Top" Width="241" Height="41" Click="Validate"/>
+        <Button x:Name="validateButton" Content="Valider" HorizontalAlignment="Left" Margin="108,335,0,0" VerticalAlignment="Top" Width="241" Height="41" Click="Validate" FontWeight="bold" Foreground="White">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#fab237"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#70521d"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
 
     </Grid>
 </Window>
